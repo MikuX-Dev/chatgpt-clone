@@ -27,7 +27,7 @@ jobs:
 
       - name: Fetch changes from upstream
         run: git remote add upstream https://github.com/xtekky/chatgpt-clone.git && git fetch upstream
-
+ 
       - name: Merge changes
         run: git merge upstream/main --allow-unrelated-histories
 
