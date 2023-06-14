@@ -26,7 +26,7 @@ jobs:
           git config user.email "abinishanth3464@gmail.com"
 
       - name: Fetch changes from upstream
-        run: git remote add upstream https://github.com/xtekky/chatgpt-clone.git && git fetch upstream
+        run: git remote add upstream https://github.com/xtekky/chatgpt-clone.git && git fetch --prune upstream
  
       - name: Merge changes
         run: git merge upstream/main --allow-unrelated-histories
@@ -34,4 +34,3 @@ jobs:
       - name: Push changes to my repo
         run: |
           git push origin main
- 
