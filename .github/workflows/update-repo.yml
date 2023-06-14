@@ -18,6 +18,7 @@ jobs:
         with:
           repository: MikuX-Dev/chatgpt-clone-website
           token: ${{ secrets.PAT_TOKEN }}
+          ssh-strict: false
 
       - name: Configure Git
         run: |
