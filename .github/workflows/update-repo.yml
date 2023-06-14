@@ -16,7 +16,7 @@ jobs:
       - name: Checkout my repo
         uses: actions/checkout@v2
         with:
-          repository: MikuX-Dev/chatgpt-clone
+          repository: MikuX-Dev/chatgpt-clone-website
           token: ${{ secrets.PAT_TOKEN }}
 
       - name: Configure Git
