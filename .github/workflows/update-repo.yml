@@ -25,17 +25,11 @@ jobs:
           git config user.name "MikuX-Dev"
           git config user.email "abinishanth3464@gmail.com"
 
-      - name: Add remote for second repo
-        run: |
-          git remote add second-repo https://github.com/xtekky/chatgpt-clone.git
+      - name: Fetch changes from upstream
+        run: git remote add upstream https://github.com/xtekky/chatgpt-clone.git && git fetch upstream
 
-      - name: Fetch changes from second repo
-        run: |
-          git remote update second-repo --prune
-
-      - name: Merge second repo into my repo
-        run: |
-          git merge second-repo/main --allow-unrelated-histories
+      - name: Merge changes
+        run: git merge upstream/main --allow-unrelated-histories
 
       - name: Push changes to my repo
         run: |
